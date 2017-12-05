@@ -1,0 +1,23 @@
+{
+  "name": "dev-challenge",
+  "version": "1.0.0",
+  "description": "JDLT developer technical challenge",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDLT-Ltd/dev-challenge.git"
+  },
+  "author": "Jake Dowie <jake@jdlt.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JDLT-Ltd/dev-challenge/issues"
+  },
+  "homepage": "https://github.com/JDLT-Ltd/dev-challenge#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
