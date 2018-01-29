@@ -2,7 +2,7 @@
 
 We're hoping to see how you approach a challenge and what sort of standards you use in your code so please feel free to be as creative as you like.
 
-The job spec will help you understand what we'd like to see.
+The [job spec](job-specification.md) will help you understand what we'd like to see.
 
 ## Dependencies
 * NPM / Yarn
