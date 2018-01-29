@@ -34,7 +34,7 @@ You should not only be able to code to a high standard but should actively follo
 * ServiceNow
 * Salesforce
 
-###Key responsibilities for this role
+### Key responsibilities for this role
 * Developing applications using various Javascript frameworks, NoSQL, HTML and CSS
 * Support and maintain existing applications
 * Provide application level support to system users
