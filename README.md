@@ -1,4 +1,4 @@
-# [JDLT](https:/jdlt.co.uk) full-stack developer challenge
+# [JDLT](https://jdlt.co.uk) full-stack developer challenge
 
 We're hoping to see how you approach a challenge and what sort of standards you use in your code so please feel free to be as creative as you like.
 
