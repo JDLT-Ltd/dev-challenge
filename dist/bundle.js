@@ -20888,24 +20888,26 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     this.state = {
       company: [],
       product: [],
-      currentOrder: {}
+      currentOrder: {},
+      address: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClickAdd = this.handleClickAdd.bind(this);
     this.handleClickMinus = this.handleClickMinus.bind(this);
+    this.handleChangeAddress = this.handleChangeAddress.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  //to pull list of company list
   componentDidMount() {
-    // this.getCompany();
     fetch('/getcompany').then(res => res.json()).then(data => {
       this.setState({
         company: data
       });
     }).catch(error => console.log(error));
-    console.log(this.state.currentOrder);
   }
 
+  //to update products dropdown options
   handleChange(event) {
     const companyname = event.target.value;
     fetch(`/getproductinfo/${companyname}`).then(res => res.json()).then(data => {
@@ -20939,8 +20941,26 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       this.setState({ currentOrder: updatedOrder });
     }
   }
+  handleChangeAddress(event) {
+    this.setState({ address: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const address = this.state.address;
+    const postNewOrder = Object.assign({ address }, this.state.currentOrder);
+    fetch('/neworder', {
+      method: 'post',
+      body: JSON.stringify(postNewOrder),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json()).then(function (data) {
+      alert(JSON.stringify(data));
+    }).catch(error => console.log(error));
+  }
   render() {
-    console.log(this.state.currentOrder);
+
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
       'div',
       null,
@@ -21005,9 +21025,19 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           );
         }) : "",
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
-          'button',
-          null,
-          'Submit Order'
+          'form',
+          { onSubmit: this.handleSubmit },
+          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+            'label',
+            null,
+            'Address'
+          ),
+          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('input', { type: 'text', value: this.state.address, onChange: this.handleChangeAddress }),
+          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+            'button',
+            null,
+            'Submit Order'
+          )
         )
       )
     );

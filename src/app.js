@@ -10,16 +10,18 @@ class App extends React.Component {
     this.state = {
       company: [],
       product: [],
-      currentOrder: {}
+      currentOrder: {},
+      address: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClickAdd = this.handleClickAdd.bind(this);
     this.handleClickMinus = this.handleClickMinus.bind(this);
+    this.handleChangeAddress = this.handleChangeAddress.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
-
+  //to pull list of company list
   componentDidMount() {
-    // this.getCompany();
     fetch('/getcompany')
       .then(res => res.json())
       .then(data => {
@@ -28,9 +30,9 @@ class App extends React.Component {
         });
       })
       .catch(error => console.log(error));
-    console.log(this.state.currentOrder)
   }
 
+  //to update products dropdown options
   handleChange(event) {
     const companyname = event.target.value;
     fetch(`/getproductinfo/${companyname}`)
@@ -65,10 +67,31 @@ class App extends React.Component {
       delete updatedOrder[productname];
       this.setState({ currentOrder: updatedOrder })
     }
+  }
+  handleChangeAddress(event) {
+    this.setState({ address: event.target.value })
+  }
 
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const address = this.state.address;
+    const postNewOrder = Object.assign({ address }, this.state.currentOrder);
+    fetch('/neworder', {
+      method: 'post',
+      body: JSON.stringify(postNewOrder),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(function (data) {
+        alert(JSON.stringify(data))
+      })
+      .catch(error => console.log(error));
   }
   render() {
-    console.log(this.state.currentOrder);
+
     return (
       <div>
         <Header title="Company price list" />
@@ -103,11 +126,15 @@ class App extends React.Component {
             return (<div key={itemName}>  <p>{item} quantity:{itemQuantity}</p>
             </div>)
           }) : ""}
+          <form onSubmit={this.handleSubmit}>
+            <label>Address</label>
+            <input type="text" value={this.state.address} onChange={this.handleChangeAddress} />
+            <button>Submit Order</button>
+          </form>
 
-          <button>Submit Order</button>
         </div>
 
-      </div>
+      </div >
     );
   }
 }
