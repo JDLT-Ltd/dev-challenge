@@ -10,17 +10,14 @@ class SearchResults extends React.Component {
 
   handleClick(event) {
     this.props.onClick(event);
-
   }
 
   handleClickMinus(event) {
     this.props.onClickMinus(event);
   }
   render() {
-
     return (
-      <div>
-        <p>search results</p>
+      <div className="searchresult_container">
         <table>
           <tbody>
             <tr>
@@ -32,16 +29,29 @@ class SearchResults extends React.Component {
             </tr>
             {this.props.result
               ? this.props.result.map(data => {
-                return (
-                  <tr key={data.id}>
-                    <td>{data.company_name}</td>
-                    <td>{data.product_name}</td>
-                    <td>{data.price}</td>
-                    <td>{data.description}</td>
-                    <td><button name={data.product_name} onClick={this.handleClick}>+</button><button name={data.product_name} onClick={this.handleClickMinus}>-</button></td>
-                  </tr>
-                );
-              })
+                  return (
+                    <tr key={data.id}>
+                      <td>{data.company_name}</td>
+                      <td>{data.product_name}</td>
+                      <td>{data.price}</td>
+                      <td>{data.description}</td>
+                      <td>
+                        <button
+                          name={data.product_name}
+                          onClick={this.handleClick}
+                        >
+                          +
+                        </button>
+                        <button
+                          name={data.product_name}
+                          onClick={this.handleClickMinus}
+                        >
+                          -
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })
               : ''}
           </tbody>
         </table>
