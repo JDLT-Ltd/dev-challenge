@@ -131,24 +131,25 @@ class App extends React.Component {
           onClickMinus={this.handleClickMinus}
         />
 
-        <div>
-          Shopping Basket:
+        <div className="shopping_basket_container">
+          <h1 className="Shopping_basket">Shopping Basket:</h1>
+          <hr />{' '}
           {this.state.currentOrder
             ? Object.keys(this.state.currentOrder).map(item => {
                 const itemQuantity = this.state.currentOrder[item];
                 const itemName = item;
                 return (
-                  <div key={itemName}>
+                  <div className="shopping_items" key={itemName}>
                     {' '}
                     <p>
-                      {item} quantity:
+                      {item} x {''}
                       {itemQuantity}
                     </p>
                   </div>
                 );
               })
             : ''}
-          <form onSubmit={this.handleSubmit}>
+          <form className="customer_form" onSubmit={this.handleSubmit}>
             <label>Address</label>
             <input
               type="text"

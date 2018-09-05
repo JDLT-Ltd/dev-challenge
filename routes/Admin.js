@@ -22,15 +22,20 @@ class Admin extends React.Component {
     return (
       <div>
         <Header title="Admin Page" />
-        <button>
-          <Link to="/">Home</Link>
-        </button>
+
+        <div className="button_div">
+          <button className="button_route">
+            <Link to="/">Home </Link>
+          </button>
+        </div>
+
         {this.state.display.map((item, index) => {
           return (
-            <p key={index}>
-              {index + 1}
+            <div className="orders" key={index}>
+              Order# {index + 1}
+              <br />
               {JSON.stringify(item)}
-            </p>
+            </div>
           );
         })}
       </div>
