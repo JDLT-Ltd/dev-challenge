@@ -88,7 +88,7 @@ orders.js | 100 | 100 | 100 | 100 | |
 # potential features:
 
 - implement database to store data
-- CSS could be improved, as well as addinfg images to enhance the visual side of the app.
+- CSS could be improved, in particular the admin page, as well as adding images to enhance the visual side of the app.
 - implement users authentication
 
 # contact
