@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1536144317877" clover="3.2.0">
+  <project timestamp="1536144317877" name="All files">
+    <metrics statements="19" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="2" elements="27" coveredelements="14" complexity="0" loc="19" ncloc="19" packages="1" files="3" classes="3">
+      <file name="databaseQuery.js" path="/Users/ethan/workspace/dev-challenge/database/databaseQuery.js">
+        <metrics statements="14" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+      <file name="mockdata.js" path="/Users/ethan/workspace/dev-challenge/database/mockdata.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+      <file name="orders.js" path="/Users/ethan/workspace/dev-challenge/database/orders.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>
