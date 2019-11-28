@@ -2,9 +2,15 @@
   "name": "dev-challenge",
   "version": "1.0.0",
   "description": "JDLT developer technical challenge",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "seed": "node db/seeds.js",
+    "serve:backend": "nodemon",
+    "serve:frontend": "webpack-dev-server --mode development",
+    "test": "mocha test/**/*_spec.js --require test/helper --recursive --exit",
+    "test:frontend": "./node_modules/.bin/cypress run",
+    "build": "webpack -p",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -17,7 +23,37 @@
   },
   "homepage": "https://github.com/JDLT-Ltd/dev-challenge#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.19.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.19.0",
+    "bulma": "^0.7.5",
+    "css-loader": "^3.2.0",
+    "cypress": "^3.7.0",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mongoose": "^5.6.9",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-select": "^3.0.4",
+    "react-toastify": "^5.4.1",
+    "sass-loader": "^7.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2"
   }
 }

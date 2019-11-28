@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.submitbtn {
+  margin-top: 10px;
+}
+
+div.select {
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+button:hover {
+  background-color: #00a0dc;
+}
+
+
+
+
+@import 'bulma'
