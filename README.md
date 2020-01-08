@@ -1,20 +1,9 @@
-# [JDLT](https://jdlt.co.uk) full-stack developer challenge
+# [![JDLT](https://jdlt.co.uk/jdlt_500px_light.png "JDLT")](https://jdlt.co.uk) full-stack developer challenge
 
 We're hoping to see how you approach a challenge and what sort of standards you use in your code so please feel free to be as creative as you like.
 
 The [job spec](https://jdlt.co.uk/join/full-stack-developer) will help you understand what we'd like to see.
 
-## Dependencies
-* NPM / Yarn
-## Instructions
-From the project root folder:
-```
-$ npm install
-```
-OR
-```
-$ yarn
-```
 Then it's over to you!
 
 **Please demonstrate:**
@@ -23,7 +12,7 @@ Then it's over to you!
 * Displaying the returned data in the grid
 * Anything else you'd like to show us
 
-### Sample data
+## Sample data
 
 | Supplier    | Product      | Price (£) |
 | ------------|--------------|-----------|
