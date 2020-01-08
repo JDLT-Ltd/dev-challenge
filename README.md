@@ -9,10 +9,10 @@ We're hoping to see how you approach a challenge and what sort of standards you 
 Then it's over to you!
 
 **Please demonstrate:**
-- [ ] Selecting suppliers and products in drop-downs
-- [ ] A round-trip to a server pulling back prices
-- [ ] Displaying the returned data in the grid
-- [ ] Anything else you'd like to show us or ideas you have 🤔
+* Selecting suppliers and products in drop-downs
+* A round-trip to a server pulling back prices
+* Displaying the returned data in the grid
+* Anything else you'd like to show us or ideas you have 🤔
 
 ---
 
