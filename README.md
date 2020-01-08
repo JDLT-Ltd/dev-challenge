@@ -2,7 +2,7 @@
 
 We're hoping to see how you approach a challenge and what sort of standards you use in your code so please feel free to be as creative as you like.
 
-The [job spec](https://jdlt.co.uk/join/full-stack-developer) will help you understand what we'd like to see.
+The [job spec](https://jdlt.co.uk/join-the-team/vacancies/) will help you understand what we'd like to see.
 
 Then it's over to you!
 
