@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/JDLT-Ltd/dev-challenge.git"
   },
-  "author": "Jake Dowie <jake@jdlt.co.uk>",
+  "author": "Jake Dowie <jake.dowie@jdlt.co.uk>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JDLT-Ltd/dev-challenge/issues"
