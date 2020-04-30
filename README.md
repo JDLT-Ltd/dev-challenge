@@ -4,7 +4,7 @@ We're hoping to see how you approach a challenge and what sort of standards you 
 
 ---
 
-🧐 The [job spec](https://jdlt.co.uk/join-the-team/vacancies/) will help you understand what we'd like to see.
+🧐 The [job spec](https://jdlt.co.uk/join-the-team/vacancies/) and the [JDLT website](https://jdlt.co.uk) will help you understand what we'd like to see.
 
 Then it's over to you!
 
